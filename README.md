@@ -2,7 +2,11 @@
 
 ## How to use
 
-Start a runpod serverless with the docker container ``svenbrnn/runpod-ollama:latest``. Set ``OLLAMA_MODEL_NAME`` environment to a model from ollama.com to automatically download a model.
+If you are using this fork, push to `master` first and let GitHub Actions build your image to:
+
+`ghcr.io/<your-github-username>/runpod-worker-ollama:latest`
+
+Then start a Runpod serverless worker with that container image. Set `OLLAMA_MODEL_NAME` to a model from ollama.com or to an Ollama-compatible Hugging Face path such as `hf.co/HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive:Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf` to automatically download the model.
 A mounted volume will be automatically used.
 
 [![RunPod](https://api.runpod.io/badge/SvenBrnn/runpod-worker-ollama)](https://www.runpod.io/console/hub/SvenBrnn/runpod-worker-ollama)
